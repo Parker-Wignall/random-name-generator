@@ -375,7 +375,7 @@ def multiple_names(num_of_names):
 def main():
     print("Name Generator")
     #Creates a choice variable to get player's choice, may add more options later...
-    choice = input("Press 1 to generate a masculine name, 2 to generate a feminine name or, 3 to print 10 of each!")
+    choice = input("Press 1 to generate a masculine name, 2 to generate a feminine name or, 3 to print specified number of each!")
     if choice == "1":
         fname_string = m_fname()
         print("First name: " + fname_string)
@@ -387,9 +387,9 @@ def main():
         print("First name: " + fname_string)
         
     elif choice == "3":
+        amount = int(input("how many names of each gender would you like?"))
         print("Generating multiples...")
-
-        multiple_names(9)
+        multiple_names(amount - 1)
         
         
     #Next, do the last name
